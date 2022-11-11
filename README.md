@@ -1,3 +1,3 @@
-# KnOps
+# Notes
 
 Notes/commands/operations

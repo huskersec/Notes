@@ -14,6 +14,16 @@ Check if supported adapter is present:
 kdnet.exe
 ```
 
+Debugging lsass.exe:
+```
+!process 0 0 lsass.exe
+.process /i /p <EPROCESS address>
+g
+
+.reload /user
+lm
+```
+
 
 
 

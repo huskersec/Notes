@@ -5,7 +5,8 @@
 Setup target (debugee) for debugging:
 ```
 bcdedit /debug on
-bcdedit /dbgsettings net hostip:<YOUR_DEBUGGER_IP> port:50000
+bcdedit /dbgsettings net hostip:<YOUR_DEBUGGER_IP> port:50000 nodhcp
+bcdedit /set "{dbgsettings}" busparams <output from kdnet for adapter>
 ```
 
 Check if supported adapter is present:

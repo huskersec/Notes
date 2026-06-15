@@ -27,4 +27,34 @@ lm
 
 
 
+Ghidriff:
+
+ghidra_diff_engine.py patch:
+```
+@@ -1618,7 +1618,13 @@
+             self.normalize_ghidra_decomp(new_code)
+ 
+             old_code_no_sig = self.remove_code_sig(ematch_1['code'])
++            if (old_code_no_sig == ""):
++                old_code_no_sig = []
++
+             new_code_no_sig = self.remove_code_sig(ematch_2['code'])
++            if (new_code_no_sig == ""):
++                new_code_no_sig = []
+
+             self.normalize_ghidra_decomp(old_code_no_sig)
+             self.normalize_ghidra_decomp(new_code_no_sig)
+```
+
+
+```
+ghidriff.exe .\apr25_vuln_clfs.sys .\may25_patched_clfs.sys
+```
+
+
+```
+```
+
+
+
 

@@ -63,6 +63,16 @@ IOCTL decode in windbg:
 !ioctldecode 0x222003
 ```
 
+DbgPrintEx mask in windbg:
+Given the DbgPrintEx() call, determine the component name (arg1) and log level (arg2). arg1 maps to
+```
+https://github.com/tpn/winsdk-10/blob/master/Include/10.0.16299.0/shared/dpfilter.h
+```
+
+For example, Ghidra shows the call as DbgPrintEx(0x4d,3,"message"). 0x4d converted to decimal is 77 so the mask we need to set is the following: 
+```
+ed nt!Kd_IHVDRIVER_Mask 0xFFFFFFFF
+```
 
 
 

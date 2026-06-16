@@ -56,5 +56,13 @@ ghidriff.exe .\apr25_vuln_clfs.sys .\may25_patched_clfs.sys
 ```
 
 
+HEVD:
+
+IOCTL decode in windbg:
+```
+!ioctldecode 0x222003
+```
+
+
 
 

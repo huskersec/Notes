@@ -72,7 +72,11 @@ https://github.com/tpn/winsdk-10/blob/master/Include/10.0.16299.0/shared/dpfilte
 For example, Ghidra shows the call as DbgPrintEx(0x4d,3,"message"). 0x4d converted to decimal is 77 so the mask we need to set is the following: 
 ```
 ed nt!Kd_IHVDRIVER_Mask 0xFFFFFFFF
+dd nt!Kd_IHVDRIVER_Mask
 ```
+
+With the mask set, we can now see the proper HEVD DbgPrintEx messages in Windbg.
+
 
 
 

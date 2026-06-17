@@ -78,5 +78,15 @@ dd nt!Kd_IHVDRIVER_Mask
 With the mask set, we can now see the proper HEVD DbgPrintEx messages in Windbg.
 
 
+windbg analyze bugcheck:
+```
+!analyze -v
+```
+
+windbg reboot:
+```
+.reboot
+```
+
 
 

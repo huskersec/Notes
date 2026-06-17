@@ -88,5 +88,12 @@ windbg reboot:
 .reboot
 ```
 
+OR
+
+snapshot/revert with:
+```
+.reload
+```
+
 
 
